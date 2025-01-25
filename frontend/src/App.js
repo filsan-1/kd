@@ -1,7 +1,7 @@
-
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FoodLog from './FoodLog';  // Import the FoodLog component
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <FoodLog />  {/* Render the FoodLog component here */}
     </div>
   );
 }
