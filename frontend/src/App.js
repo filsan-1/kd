@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import FoodLog from './FoodLog';  // Import the FoodLog component
 
@@ -7,20 +6,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to KidFit!</h1>  {/* do i like this name  */}
+        <p>Start logging your  childs meals and track fitness!</p>
       </header>
-      <FoodLog />  {/* Render the FoodLog component here */}
+
+      <main>
+        <FoodLog />  {/* Render the FoodLog component here */}
+      </main>
     </div>
   );
 }

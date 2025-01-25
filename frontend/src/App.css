@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  background-color: #fff3e0;  /* Soft peachy background color */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin; /* Adjust the size of the logo */
   pointer-events: none;
 }
 
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffeb3b; /* Bright yellow header */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +25,22 @@
   color: white;
 }
 
+.App-header h1 {
+  color: #ff4081; /* Fun pink for the main title */
+  font-size: 3rem;  /* Large title */
+}
+
 .App-link {
-  color: #61dafb;
+  color: #303f9f;  /* Child-friendly blue for links */
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ff4081; /* Bright pink button-like style */
+}
+
+.App-link:hover {
+  background-color: #ff80ab; /* H */
 }
 
 @keyframes App-logo-spin {
