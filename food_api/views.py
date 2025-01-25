@@ -35,7 +35,7 @@ def breakfast_list(request):
         breakfast = Food.objects.filter(user=request.user.profile.id,category="B",date_eaten__range=[today,tomorrow])
         print(breakfast)
         serializer = FoodSerializer(breakfast,many=True)
-        return Response({"message":"here's yo food","data":serializer.data})
+        return Response({"message":"here's your childs food","data":serializer.data})
     except:
         return Response({"message":"No breakfast found"})
     
@@ -50,7 +50,7 @@ def lunch_list(request):
     try:
         lunch = Food.objects.filter(user=request.user.profile.id,category="L",date_eaten__range=[today,tomorrow])
         serializer = FoodSerializer(lunch,many=True)
-        return Response({"message":"here's yo food","data":serializer.data})
+        return Response({"message":"here's your childs  food","data":serializer.data})
     except:
         return Response({"message":"No lunch found"})
  
@@ -78,7 +78,7 @@ def snack_list(request):
     try:
         snack = Food.objects.filter(user=request.user.profile.id,category="S",date_eaten__range=[today,tomorrow])
         serializer = FoodSerializer(snack,many=True)
-        return Response({"message":"here's yo food","data":serializer.data})
+        return Response({"message":"here's your childs food","data":serializer.data})
     except:
         return Response({"message":"No snacks found"})
  
@@ -92,7 +92,7 @@ def cheat_list(request):
     try:
         cheat = Food.objects.filter(user=request.user.profile.id,category="C",date_eaten__range=[today,tomorrow])
         serializer = FoodSerializer(cheat,many=True)
-        return Response({"message":"here's yo food","data":serializer.data})
+        return Response({"message":"here's your childs food","data":serializer.data})
     except:
         return Response({"message":"No cheat meals found"})
 
@@ -110,7 +110,7 @@ def total_user_calories(request):
     proteinCalories = total["protein__sum"]
     carbsCalories = total["carbs__sum"]
 
-    return Response({"message":"here's you food data","data":{"date":today,"totalCalories":totalCalories,"fatCalories":fatCalories,"proteinCalories":proteinCalories,"carbsCalories":carbsCalories}})
+    return Response({"message":"here's you food data to mantain happy and healthy child ","data":{"date":today,"totalCalories":totalCalories,"fatCalories":fatCalories,"proteinCalories":proteinCalories,"carbsCalories":carbsCalories}})
 
 
 @api_view(['GET'])
